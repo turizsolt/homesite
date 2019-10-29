@@ -2,6 +2,7 @@ import {em, px} from "csx";
 import React, { FC } from 'react';
 import {style} from "typestyle";
 import {cube} from "../config/StyleTools";
+import {PhotoGalery} from "./PhotoGalery";
 import {Tag} from "./Tag";
 
 const imageStyle = style({
@@ -33,12 +34,7 @@ export const Project: FC<Props> = props => {
   return <div>
     <h1>{name}</h1>
     <div className={dividerStyle}>
-      <div style={{ display: 'flex', overflowX: 'hidden' }}>
-        <img src={image} alt={image} className={imageStyle} />
-        <img src={image} alt={image} className={imageStyle} />
-        <img src={image} alt={image} className={imageStyle} />
-        <img src={image} alt={image} className={imageStyle} />
-      </div>
+      <PhotoGalery images={[image, image, image, image]} />
       <div style={{ flexGrow: 1 }}>
         <section>
           {description}
