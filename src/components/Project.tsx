@@ -1,15 +1,8 @@
-import {em, px} from "csx";
+import {em} from "csx";
 import React, { FC } from 'react';
 import {style} from "typestyle";
-import {cube} from "../config/StyleTools";
 import {PhotoGalery} from "./PhotoGalery";
 import {Tag} from "./Tag";
-
-const imageStyle = style({
-  width: px(6 * cube),
-  height: px(4 * cube),
-  marginRight: px(.5 * cube),
-});
 
 const dividerStyle = style({
   display: 'flex',
